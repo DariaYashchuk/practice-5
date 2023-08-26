@@ -4,6 +4,7 @@ import { Layout } from '../../layout/Layout/Layout';
 import { routes } from '../../routes';
 import { Home, Options } from '../../views';
 
+
 export const App = () => {
   return (
     <>

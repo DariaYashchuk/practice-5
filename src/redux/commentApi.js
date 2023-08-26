@@ -22,7 +22,14 @@ export const commentApi = createApi({
       }),
       invalidatesTags: ["Comments"],
     }),
+    deleteComment: builder.mutation({
+      query: (id) => ({
+        url: `${API_ENDPOINT}/${id}`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["Comments"],
+    }),
   }),
 });
 
-export const { useGetCommentsQuery, useAddCommentMutation } = commentApi;
+export const { useGetCommentsQuery, useAddCommentMutation, useDeleteCommentMutation } = commentApi;
